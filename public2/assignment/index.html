@@ -12,38 +12,38 @@
 		<link href="css/style.css" rel="stylesheet"/>
 		
 		<!-- AngularJS -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular-route.js"></script>	
 		<script src="app.js"></script>
 		<script src="config.js"></script>
 		
-		<script src="views/header/header.controller.js"></script>
-		<script src="views/sidebar/sidebar.controller.js"></script>
-		<script src="views/login/login.controller.js"></script>
-		<script src="views/register/register.controller.js"></script>
-		<script src="views/profile/profile.controller.js"></script>
-		<script src="views/form/form.controller.js"></script>
-		<script src="views/field/field.controller.js"></script>
+		<script src="'header/header.controller.js'"></script>
+		<script src="'sidebar/sidebar.controller.js'"></script>
+		<script src="'login/login.controller.js'"></script>
+		<script src="'register/register.controller.js'"></script>
+		<script src="'profile/profile.controller.js'"></script>
+		<script src="'form/form.controller.js'"></script>
+		<script src="'field/field.controller.js'"></script>
 		
 		<script src="service/UserService.js"></script>
 		<script src="service/FormService.js"></script>
 		<script src="service/FieldService.js"></script>
-		
-		<title>Index</title>
 	</head>		
+	
 	<body>
-		<div ng-include="'header/header.view.html'"></div>
+		<nav class="navbar navbar-inverse">
+			<div ng-include="'header/header.view.html'"></div>
+		</nav>
 		
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-3 col-md-2 sidebar" ng-include="'sidebar/sidebar.view.html'"></div>
+				<div ng-include="'sidebar/sidebar.view.html'"></div>
 				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-view></div>
 			</div>
 		</div>
 		
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	</body>	
 </html>
 
