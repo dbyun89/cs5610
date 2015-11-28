@@ -1,7 +1,10 @@
-
+<!DOCTYPE html>
+<html lang="en" ng-app="FormBuilderApp">
+<head>
     <meta charset="UTF-8">
     <title>Forms</title>
-
+</head>
+<body>
     <div class="container-fluid">
       <div class="row">
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -12,8 +15,6 @@
 
           <li role="presentation"><a href="form-fields.html">Fields</a></li>
         </ul>
-		
-		
         <table class="table table-striped">
           <thead>
             <tr>
@@ -28,26 +29,29 @@
             <tbody >
                <tr>
                     <td><input ng-model="form.formName" class="form-control" type="text" name="firstName" placeholder="name"/></td>
-                    <td><button ng-click="addForm()" type="button" class="btn btn-default active btn-block">
+                    <td><button ng-click="addForm()" type="submit" class="btn btn-default active btn-block">
                         
                         <span class="glyphicon glyphicon-plus"></span>
                       </button>
-                        <button ng-click="updateForm()" type="button" class="btn btn-default active btn-block">
+                        <button ng-click="updateForm()" type="submit" class="btn btn-default active btn-block">
                         
                         <span class="glyphicon glyphicon-ok"></span>
                       </button>
                     </td>
                 </tr>
-                <tr ng-repeat="form in forms">
+                <tr ng-repeat="form in forms"> 
                     <td>{{form.formName}}</td>
                     <td>
-                        <button ng-click="deleteForm($index)" type="button" class="btn btn-default active btn-block"></button>
-                        <button ng-click="selectForm($index)" type="button" class="btn btn-default active btn-block"></button>
+                        <button ng-click="deleteForm($index)" type="submit" class="btn btn-default active btn-block"><span class="glyphicon glyphicon-remove"></span></button>
+                        <button ng-click="selectForm($index)" type="submit" class="btn btn-default active btn-block"><span class="glyphicon glyphicon-pencil"></span></button>
                     </td>
                 </tr>
+                
             </tbody>
         </table>
        </div>
           </div>
         </div>
     </div>
+    </body>
+</html>

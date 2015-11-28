@@ -24,6 +24,7 @@
 				templateUrl: "views/profile/profile.view.html",
 				controller: "ProfileController"
 			})
+			
 			.when("/form", {
 				templateUrl: "views/form/form.view.html",
 				controller: "FormController"

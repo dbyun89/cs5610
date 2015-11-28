@@ -6,7 +6,7 @@
         .controller("FormController", FormController);
 
     function FormController($scope, $location, FormService, $rootScope) {
-		$scope.$location = $location;
+        $scope.$location = $location;
         
         if ($rootScope.user != null) {
         FormService.findAllFormsForUser($rootScope.user.id, callback);                    
