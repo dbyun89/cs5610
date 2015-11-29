@@ -15,9 +15,8 @@
 		
 		function createFormForUser(userId, form) {
 			var deferred = $q.defer();
-			
 			$http
-				.post("/api/assignment/uer/" + userId + "/form", form)
+				.post("/api/assignment/user/" + userId + "/form", form)
 				.success(function(response) {
 					deferred.resolve(response);
 				});
@@ -26,7 +25,6 @@
 		
 		function findAllFormsForUser(userId) {
 			var deferred = $q.defer();
-			
 			$http
 				.get("/api/assignment/user/" + userId + "/form")
 				.success(function(response) {
@@ -37,7 +35,6 @@
         
 		function deleteFormById(formId) {
 			var deferred = $q.defer();
-			
 			$http
 				.delete("/api/assignment/form/" + formId)
 				.success(function(response) {

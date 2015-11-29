@@ -1,7 +1,10 @@
-"use strict";
-
 module.exports = function(app) {
-	var forms = require('./form.mock.json');
+	"use strict";
+	var q = require("q");
+	var uuid = require('uuid');
+	//var forms = require('./form.mock.json');
+	var FormSchema = require('./form.schema.js')(mongoose);
+	var FormModel = mongoose.model("FormModel", FormSchema);
 	
 	var api = {	
 			createForm : createForm
@@ -11,6 +14,8 @@ module.exports = function(app) {
 			deleteForm : deleteForm,
 			findFormByTitle : findFormByTitle,
 			findFormsByUserId : findFormsByUserId,
+			
+			
 	};
 	
 	return api;

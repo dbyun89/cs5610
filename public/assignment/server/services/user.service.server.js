@@ -1,6 +1,5 @@
-"use strict";
-
 module.exports = function(app, model) {
+	"use strict";
 	app.post("/api/assignment/user", createNewUser);
 	app.get("/api/assignment/user", getAllUsers);
 	app.get("/api/assignment/user/:id", getUserById);
@@ -17,7 +16,6 @@ module.exports = function(app, model) {
 				res.json(users);
 			});
 	}
-
     function getAllUsers(req, res) {
         model
             .findAllUsers()
@@ -25,7 +23,6 @@ module.exports = function(app, model) {
                 res.json(users);
             });
     }
-
     function getUserById(req, res) {
         var id = req.params["id"];
         model
@@ -34,7 +31,6 @@ module.exports = function(app, model) {
                 res.json(user);
             });
     }
-
     function getUserByUsername(req, res) {
         var username = req.params["username"];
         model
@@ -43,7 +39,6 @@ module.exports = function(app, model) {
                 res.json(user);
             });
     }
-
     function getUserByNameAndPassword(req, res) {
         var username = req.params["username"];
         var password = req.params["password"];
@@ -53,7 +48,6 @@ module.exports = function(app, model) {
                 res.json(user);
             });
     }
-
     function updateUserById(req, res) {
         var id = req.params["id"];
         var user = req.body;
@@ -63,7 +57,6 @@ module.exports = function(app, model) {
                 res.json(users);
             });
     }
-
     function deleteUserById(req, res) {
         var id = req.params["id"];
         model
