@@ -10,7 +10,7 @@
 			getFieldsForForm : getFieldsForForm,
 			getFieldForForm : getFieldForForm,
 			deleteFieldFromForm : deleteFieldFromForm,
-			updateField : updateField
+			updateField : updateField,
 		};
 		return FieldService;
 		

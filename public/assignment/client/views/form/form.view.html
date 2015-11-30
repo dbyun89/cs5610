@@ -1,54 +1,44 @@
 <head>
-    <meta charset="UTF-8">
     <title>Forms</title>
 </head>
 <body>
-    <div class="container-fluid" ng-controller="FormController as model">
-      <div class="row">
-
-
-        <h1>Forms</h1>
-        <ul class="nav nav-tabs">
-          <li role="presentation" class="active"><a href="#">Forms</a></li>
-
-          <li role="presentation"><a href="#/user/:userId/form/:formId/fields">Fields</a></li>
-        </ul>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>
-                  <span class="glyphicon glyphicon-triangle-bottom"></span>
-                Form Name</th>
-              <th>
-                  <span class="glyphicon glyphicon-triangle-bottom"></span>Action</th>
-            </tr>
-            
-          </thead>
-            <tbody >
-               <tr>
-                    <td><input ng-model="form.formName" class="form-control" type="text" name="firstName" placeholder="name"/></td>
-                    <td><button ng-click="addForm()" type="submit" class="btn btn-default active btn-block">
-                        
-                        <span class="glyphicon glyphicon-plus"></span>
-                      </button>
-                        <button ng-click="updateForm()" type="submit" class="btn btn-default active btn-block">
-                        
-                        <span class="glyphicon glyphicon-ok"></span>
-                      </button>
-                    </td>
-                </tr>
-                <tr ng-repeat="form in forms"> 
-                    <td>{{form.formName}}</td>
-                    <td>
-                        <button ng-click="deleteForm($index)" type="submit" class="btn btn-default active btn-block"><span class="glyphicon glyphicon-remove"></span></button>
-                        <button ng-click="selectForm($index)" type="submit" class="btn btn-default active btn-block"><span class="glyphicon glyphicon-pencil"></span></button>
-                    </td>
-                </tr>
-                
-            </tbody>
-        </table>
-
-
-        </div>
-    </div>
+	<div class="container-fluid" ng-controller="FormController as model">
+		<div class="row">
+		<h1>Forms</h1>
+		<ul class="nav nav-tabs">
+			<li role="presentation" class="active"><a href="#/form">Forms</a></li>
+			<li role="presentation"><a href="#/user/:userId/form/:formId/fields">Fields</a></li>
+		</ul>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th><span class="glyphicon glyphicon-triangle-bottom"></span>Form Name</th>
+					<th><span class="glyphicon glyphicon-triangle-bottom"></span>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>
+					<input ng-model="form.formName" class="form-control" type="text" name="firstName" placeholder="name"></input>
+				</td>
+				<td>
+					<button ng-click="addForm()" type="submit" class="btn btn-default active btn-block">
+						<span class="glyphicon glyphicon-plus"></span>
+					</button>
+					<button ng-click="updateForm()" type="submit" class="btn btn-default active btn-block">
+						<span class="glyphicon glyphicon-ok"></span>
+					</button>
+				</td>
+			</tr>
+			<tr ng-repeat="form in forms"> 
+				<td>{{form.formName}}</td>
+				<td>
+					<button ng-click="deleteForm($index)" type="submit" class="btn btn-default active btn-block"><span class="glyphicon glyphicon-remove"></span></button>
+					<button ng-click="selectForm($index)" type="submit" class="btn btn-default active btn-block"><span class="glyphicon glyphicon-pencil"></span></button>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+		</div>
+	</div>
 </body>
