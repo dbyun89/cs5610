@@ -1,0 +1,35 @@
+//HTML
+<script src="70-modules.js"></script>
+<script src="70-app.js"></script>
+
+<h1>Modules</h1>
+
+
+//70-modules.js
+var math = (function()
+{
+  var api = {
+    add: add,
+    subtract: subtract
+  };
+  
+  return api;
+  
+  function add(a, b)
+  {
+    return a + b;
+  }
+  
+  function subtract(a, b)
+  {
+    return a - b;
+  }
+})();
+
+
+//70-app.js
+(function(math)
+{
+  alert(math.add(2,3));
+  alert(math.subtract(5,2));
+}) (math);
