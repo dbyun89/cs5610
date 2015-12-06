@@ -5,19 +5,21 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Title</th>
-            <th>Start</th>
-            <th>Price</th>
-			 <th>Category</th>
+            <th>name</th>
+            <th>datePosted</th>
+            <th>price</th>
+			 <th>category</th>
+			 <th>company</th>
             <th>&nbsp;</th>
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="course in courses">
-            <td>{{equipment.title}}</td>
-            <td>{{equipment.start | date}}</td>
+        <tr ng-repeat="equipment in equipment">
+            <td>{{equipment.name}}</td>
+            <td>{{equipment.datePosted | date}}</td>
             <td>{{equipment.price}}</td>
 			 <td>{{equipment.category}}</td>
+			 <td>{{equipment.company}}</td>
             <td>
                 <button ng-click="removeCourse($index)" class="btn btn-danger">
                     Remove
