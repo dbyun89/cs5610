@@ -22,6 +22,15 @@
             .when("/login", {
                 templateUrl: "login.html"
             })
+			.when("/profile", {
+				templateUrl: "profile.html"
+			})
+			.when("/admin", {
+				templateUrl: "admin.html"
+			})
+			.when("/form", {
+				templateUrl: "form.html"
+			})
             .otherwise({
                 redirectTo: "/home"
             });

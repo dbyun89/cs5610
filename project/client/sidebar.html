@@ -1,9 +1,10 @@
 <nav>
 	<ul class="nav nav-pills nav-stacked">
 		<li ng-class="{'active' : $location.url().indexOf('home') != -1}"><a href="#/home">Home</a></li>
+		<li ng-class="{'active' : $location.url().indexOf('courses') != -1}"><a href="#/courses">Equipment Browse</a></li>		
 		<li ng-class="{'active' : $location.url().indexOf('courses') != -1}"><a href="#/courses">Equipment Search</a></li>
 		<li ng-class="{'active' : $location.url().indexOf('profile') != -1}"><a href="#/profile">Profile</a></li>
 		<li ng-class="{'active' : $location.url().indexOf('admin') != -1}"><a href="#/admin">Admin</a></li>
-		<li ng-class="{'active' : $location.url().indexOf('forms') != -1}"><a href="#/form">Post Equipment</a></li>
+		<li ng-class="{'active' : $location.url().indexOf('form') != -1}"><a href="#/form">Post Equipment</a></li>
 	</ul>
 </nav>
