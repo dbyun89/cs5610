@@ -14,7 +14,7 @@
 		var courses = [
 			{title: "Steel Leaf Rake", start: new Date(), price: 14.97, category: "Rakes"},
 			{title: "Post Hole Digger", start: new Date(), price: 34.97, category: "Digging Tools"}
-		]
+		];
 
         var service = {
             getAllCourses: getAllCourses,

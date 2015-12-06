@@ -57,7 +57,30 @@ app.get("/rest/equipment", function(req, res) {
 });
 
 
+//User Schema
+var UserSchema = new mongoose.Schema ({
+	name: String,
+	password: String,
+	dateCreated: {type: Date, default: Date.now},
+	email: String,
+	role: String
+}, {collection: "user"});	
 
+var user = mongoose.model("user", UserSchema);
+
+app.get("/rest/user", function(req, res) {
+	
+	user.find(function(err, userList) {
+		if (userList) {
+		console.log("in serverTest.js" + userList);
+		res.json(userList);
+		}
+		else {
+			console.log("stuck in user.find");
+		}
+		
+	});
+});
 
 
 

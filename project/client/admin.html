@@ -1,1 +1,31 @@
 <h1>Admin</h1>
+
+{{user}}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>dateCreated</th>
+            <th>password</th>
+			 <th>email</th>
+			 <th>role</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in user">
+            <td>{{user.name}}</td>
+            <td>{{user.dateCreated | date}}</td>
+            <td>{{user.password}}</td>
+			 <td>{{user.email}}</td>
+			 <td>{{user.role}}</td>
+            <td>
+                <button ng-click="removeUser($index)" class="btn btn-danger">
+                    Remove
+                </button>
+                <a href="#/userEdit/{{$index}}" class="btn btn-primary">Edit</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

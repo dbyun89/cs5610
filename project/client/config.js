@@ -5,7 +5,7 @@
 
     function Configure($routeProvider) {
         $routeProvider
-            .when("/home",{
+            .when("/home", {
                 templateUrl: "home.html"
             })
             .when("/register", {
@@ -26,7 +26,8 @@
 				templateUrl: "profile.html"
 			})
 			.when("/admin", {
-				templateUrl: "admin.html"
+				templateUrl: "admin.html",
+				controller: "AdminController"
 			})
 			.when("/form", {
 				templateUrl: "form.html"

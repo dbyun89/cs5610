@@ -1,0 +1,45 @@
+mongo commands:
+db.equipment.remove({})
+	-removes all
+db.equipment.insert({})
+db.equipment.find().pretty()
+
+
+Sample Equiment List
+db.equipment.insert({name:"Text", datePosted: new Date(), price:11.11, category:"Text", company:"Text"})
+
+db.equipment.insert({name:"Sportsman's Axe with Leather Grip Handle", datePosted: new Date(), price:34.97, category:"Striking Tools", company:"EstWing"})
+
+db.equipment.insert({name:"Pick Mattock with Fiberglass Handle", datePosted: new Date(), price:29.97, category:"Striking Tools", company:"ROCKFORGE"})
+
+db.equipment.insert({name:"AeroCart", datePosted: new Date(), price:139.99, category:"Transport Tools", company:"ROCKFORGE"})
+
+db.equipment.insert({name:"Steel Wheelbarrow", datePosted: new Date(), price:99.97, category:"Transport Tools", company:"Jackson"})
+
+
+Sample User List
+db.user.insert({name:"Text", password:"Text", email:"Text", dateCreated: new Date(), role:"user Or admin"})
+
+db.user.insert({name:"Justus Arnold", password:"JA123", email:"JArnold@GardenEquipment.com", dateCreated: new Date(), role:"user"})
+
+db.user.insert({name:"Kenzie Arjuna", password:"KA123", email:"KArjuna@GardenEquipment.com", dateCreated: new Date(), role:"user"})
+
+db.user.insert({name:"David Byun", password:"DB123", email:"DByun@GardenEquipmentAdmin.com", dateCreated: new Date(), role:"admin"})
+
+db.user.insert({name:"Sextilius Scottie", password:"SS123", email:"SScottie@GardenEquipment.com", dateCreated: new Date(), role:"user"})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
