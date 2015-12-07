@@ -1,4 +1,4 @@
-(function(){
+(function() {
     angular
         .module("WhiteBoardApp")
         .config(Configure);
@@ -26,4 +26,4 @@
                 redirectTo: "/home"
             });
     }
-})();
+}) ();

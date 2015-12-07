@@ -4,6 +4,14 @@ db.equipment.remove({})
 db.equipment.insert({})
 db.equipment.find().pretty()
 
+//Equipment Schema
+var EquipmentSchema = new mongoose.Schema ({
+	name: String,
+	datePosted: {type: Date, default: Date.now},
+	price: Number,
+	category: String (5 major categories)
+	seller: String (userId)
+}, {collection: "equipment"});	
 
 Sample Equiment List
 db.equipment.insert({name:"Text", datePosted: new Date(), price:11.11, category:"Text", company:"Text"})
@@ -16,6 +24,15 @@ db.equipment.insert({name:"AeroCart", datePosted: new Date(), price:139.99, cate
 
 db.equipment.insert({name:"Steel Wheelbarrow", datePosted: new Date(), price:99.97, category:"Transport Tools", company:"Jackson"})
 
+//User Schema
+var UserSchema = new mongoose.Schema ({
+	name: String,
+	password: String,
+	dateCreated: {type: Date, default: Date.now},
+	email: String,
+	role: String
+	//equipmentPosted: Array?
+}, {collection: "user"});	
 
 Sample User List
 db.user.insert({name:"Text", password:"Text", email:"Text", dateCreated: new Date(), role:"user Or admin"})
@@ -29,7 +46,8 @@ db.user.insert({name:"David Byun", password:"DB123", email:"DByun@GardenEquipmen
 db.user.insert({name:"Sextilius Scottie", password:"SS123", email:"SScottie@GardenEquipment.com", dateCreated: new Date(), role:"user"})
 
 
-
+Sample Pages List
+db.pages.insert({label: "example label", created: new Date()})
 
 
 

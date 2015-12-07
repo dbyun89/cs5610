@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page -->
+<html lang="en" ng-app="PageEditorApp" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular-route.js"></script>
+	
+	
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+    <script src="page.list.controller.js"></script>
+    <script src="page.details.controller.js"></script>
+    <script src="page.content.details.controller.js"></script>
+    <script src="page.service.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <h1>Page Editor</h1>
+        <!-- ngView:  --><div ng-view="" class="ng-scope"><h2 class="ng-scope">Page List</h2>
+
+<table class="table ng-scope">
+    <tbody><tr>
+        <td>
+            <input ng-model="model.page.label" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Page Name">
+        </td>
+        <td>
+            <button ng-click="model.addPage(model.page)" class="btn btn-success">
+                <span class="glyphicon glyphicon-plus"></span>
+            </button>
+        </td>
+    </tr>
+    <!-- ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/564404e3e8abcc2118787d9c/details" class="ng-binding">
+                
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/56451035e7b95170b93b3cfb/details" class="ng-binding">
+                
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/56451037e7b95170b93b3cfc/details" class="ng-binding">
+                cv
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/56482fbd09094f60cdbe454f/details" class="ng-binding">
+                sdsdsd
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/56482fbd09094f60cdbe4550/details" class="ng-binding">
+                sdsdsd
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/5648301009094f60cdbe4551/details" class="ng-binding">
+                sdsd
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/5643c6d7e8abcc2118787d9b/details" class="ng-binding">
+                h
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/5648289009094f60cdbe454d/details" class="ng-binding">
+                mypage
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/564bce1824a8cad987477e50/details" class="ng-binding">
+                
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/564bce1c24a8cad987477e51/details" class="ng-binding">
+                abcd
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/564e39bc24a8cad987477e58/details" class="ng-binding">
+                
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/564e39bf24a8cad987477e59/details" class="ng-binding">
+                hi
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/564e39c124a8cad987477e5a/details" class="ng-binding">
+                hi
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/564ea5c4f0a28341a487f571/details" class="ng-binding">
+                
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/564ec1eff0a28341a487f572/details" class="ng-binding">
+                
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/5642b26e0c0a9bc4588af83e/details" class="ng-binding">
+                home
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/565260f8dc3d6a0f98fa997a/details" class="ng-binding">
+                dae
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/5642b2820c0a9bc4588af83f/details" class="ng-binding">
+                about
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/565365d2d8787f8753380cf4/details" class="ng-binding">
+                
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/565365d2d8787f8753380cf5/details" class="ng-binding">
+                
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/565365d2d8787f8753380cf6/details" class="ng-binding">
+                
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/565365d3d8787f8753380cf7/details" class="ng-binding">
+                
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/565365d9d8787f8753380cf8/details" class="ng-binding">
+                opk
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/5655afaad8787f8753380d00/details" class="ng-binding">
+                hello
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/56569881d8787f8753380d11/details" class="ng-binding">
+                sample page
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/5658037cd8787f8753380d1b/details" class="ng-binding">
+                
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/56580381d8787f8753380d1c/details" class="ng-binding">
+                kjjk
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/5658c401d8787f8753380d23/details" class="ng-binding">
+                dfgsd
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/5659b90ed8787f8753380d2a/details" class="ng-binding">
+                fasdfasd
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/564674213703b84f290ad15b/details" class="ng-binding">
+                dd
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/565cf31ad8787f8753380d3a/details" class="ng-binding">
+                jklkl
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/565cf31bd8787f8753380d3b/details" class="ng-binding">
+                jklkl
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/565cf31bd8787f8753380d3c/details" class="ng-binding">
+                jklkl
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/565cf31bd8787f8753380d3d/details" class="ng-binding">
+                jklkl
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/5642b2870c0a9bc4588af840/details" class="ng-binding">
+                profile
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/564674233703b84f290ad15c/details" class="ng-binding">
+                dd
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/56471ebd3703b84f290ad160/details" class="ng-binding">
+                wefw
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/56482fb309094f60cdbe454e/details" class="ng-binding">
+                sdsdsd
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/565cf31dd8787f8753380d3e/details" class="ng-binding">
+                jklkl
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/565cf31dd8787f8753380d3f/details" class="ng-binding">
+                jklkl
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/565cf31dd8787f8753380d40/details" class="ng-binding">
+                jklkl
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/565cf572d8787f8753380d41/details" class="ng-binding">
+                
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/565cf574d8787f8753380d42/details" class="ng-binding">
+                asdf
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/565cf574d8787f8753380d43/details" class="ng-binding">
+                asdf
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/565cf575d8787f8753380d44/details" class="ng-binding">
+                asdf
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/565cf575d8787f8753380d45/details" class="ng-binding">
+                asdf
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/565d297cd8787f8753380d49/details" class="ng-binding">
+                1
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/565d297dd8787f8753380d4a/details" class="ng-binding">
+                1
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages --><tr ng-repeat="page in model.pages" class="ng-scope">
+        <td>
+            <a href="http://portal-cs5610online.rhcloud.com/lectures/mongo/pageEditor/client/index.html#/page/565d297ed8787f8753380d4b/details" class="ng-binding">
+                1
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr><!-- end ngRepeat: page in model.pages -->
+</tbody></table>
+</div>
+    </div>
+
+</body></html>
