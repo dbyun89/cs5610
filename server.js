@@ -15,15 +15,15 @@ app.use(multer());
 var connectionString = process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://localhost/cs5610';
 mongoose.connect(connectionString);
 
-/* if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD) {
+if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD) {
     connectionString = process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
         process.env.OPENSHIFT_MONGODB_DB_PASSWORD + "@" +
         process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
         process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
         process.env.OPENSHIFT_APP_NAME;
-} */
+}
 
-//var db = mongoose.connect(connectionString);
+var db = mongoose.connect(connectionString);
 
 app.use(express.static(__dirname));
 
