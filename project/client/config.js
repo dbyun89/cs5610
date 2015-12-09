@@ -53,6 +53,25 @@
             })
 			
 			
+			.when("/equipment", {
+                templateUrl: "views/equipment/equipment.list.view.html",
+                controller: "EquipmentListController",
+                controllerAs: "model"
+            })
+            .when("/equipment/:equipmentId/details",
+            {
+                templateUrl: "views/equipment/equipment.details.view.html",
+                controller: "EquipmentDetailsController",
+                controllerAs: "model"
+            })
+			/* get rid of this unless I want admin to be able to change these values */
+            .when("/equipment/:equipmentId/details/:index",
+            {
+                templateUrl: "views/equipment/equipment.content.details.view.html",
+                controller: "EquipmentContentEditorController",
+                controllerAs: "model"
+            })
+			
 			
             .otherwise({
                 redirectTo: "/home"
