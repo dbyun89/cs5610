@@ -3,7 +3,7 @@
 <table class="table">
     <tr>
         <td>
-            <input ng-model="model.equipment.label" class="form-control" placeholder="Equipment Name"/>
+            <input ng-model="model.equipment.name" class="form-control" placeholder="Equipment Name"/>
         </td>
         <td>
             <button ng-click="model.addEquipment(model.equipment)" class="btn btn-success">
@@ -14,7 +14,7 @@
     <tr ng-repeat="equipment in model.equipments">
         <td>
             <a href="#/equipment/{{equipment._id}}/details">
-                {{equipment.label}}
+                {{equipment.name}}
             </a>
         </td>
         <td>&nbsp;</td>

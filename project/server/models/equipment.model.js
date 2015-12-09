@@ -2,6 +2,7 @@ var q = require("q");
 
 module.exports = function(mongoose, db){
     var EquipmentSchema = mongoose.Schema({
+		"name": String,
         "label": String,
         "created": {type: Date, default: Date.now},
         "content": [{
