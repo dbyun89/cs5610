@@ -1,9 +1,9 @@
 module.exports = function(app, model) {
-    app.post("/rest/equipment", addEquipment);
-    app.get("/rest/equipment", getAllEquipments);
-    app.get("/rest/equipment/:id", getEquipmentById);
-    app.post("/rest/equipment/:equipmentId/content/:contentType", addContent);
-
+    app.post("/api/lecture/mongo/pe/equipment", addEquipment);
+    app.get("/api/lecture/mongo/pe/equipment", getAllEquipments);
+    app.get("/api/lecture/mongo/pe/equipment/:id", getEquipmentById);
+    app.post("/api/lecture/mongo/pe/equipment/:equipmentId/content/:contentType", addContent);
+	
     function addContent(req, res) {
         var equipmentId = req.params["equipmentId"];
         var contentType = req.params["contentType"];

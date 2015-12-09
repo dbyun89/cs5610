@@ -15,7 +15,7 @@
         function addContent(equipmentId, contentType) {
             var deferred = $q.defer();
 
-            $http.post("/rest/equipment/" + equipmentId + "/content/" + contentType)
+            $http.post("/api/lecture/mongo/pe/equipment/" + equipmentId + "/content/" + contentType)
                 .success(function(equipment){
                     deferred.resolve(equipment);
                 });
@@ -26,7 +26,7 @@
         function addEquipment(equipment) {
             var deferred = $q.defer();
 
-            $http.post("/rest/equipment", equipment)
+            $http.post("/api/lecture/mongo/pe/equipment", equipment)
                 .success(function(equipments){
                     deferred.resolve(equipments);
                 });
@@ -37,7 +37,7 @@
         function getAllEquipments() {
             var deferred = $q.defer();
 
-            $http.get("/rest/equipment")
+            $http.get("/api/lecture/mongo/pe/equipment")
                 .success(function(equipments){
                     deferred.resolve(equipments);
                 });
@@ -48,7 +48,7 @@
         function getEquipmentById(id) {
             var deferred = $q.defer();
 
-            $http.get("/rest/equipment/"+id)
+            $http.get("/api/lecture/mongo/pe/equipment/"+id)
                 .success(function(equipment){
                     deferred.resolve(equipment);
                 });
