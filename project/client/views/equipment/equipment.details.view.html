@@ -1,9 +1,9 @@
 <h2>Equipment Details</h2>
 
-<h3>{{equipmentModel.equipment.label}}</h3>
+<h3>{{model.equipment.label}}</h3>
 
 <table class="table">
-    <tr ng-repeat="content in equipmentModel.equipment.content" class="table">
+    <tr ng-repeat="content in model.equipment.content" class="table">
         <td>
             <h1 ng-if="content.contentType=='HEADING' && content.heading.size==1">
                 {{content.heading.content}}
@@ -35,7 +35,7 @@
             <button ng-click="removeContent(content)" class="btn btn-danger">
                 <span class="glyphicon glyphicon-remove"></span>
             </button>
-            <a href="#/equipment/{{equipmentModel.equipment._id}}/details/{{$index}}" class="btn btn-warning">
+            <a href="#/equipment/{{model.equipment._id}}/details/{{$index}}" class="btn btn-warning">
                 <span class="glyphicon glyphicon-pencil"></span>
             </a>
             <span class="glyphicon glyphicon-align-justify"></span>
@@ -43,7 +43,7 @@
     </tr>
     <tr>
         <td>
-            <select ng-model="equipmentModel.contentType" class="form-control">
+            <select ng-model="model.contentType" class="form-control">
                 <option ng-value="HEADING">HEADING</option>
                 <option ng-value="LABEL">LABEL</option>
                 <option ng-value="PARAGRAPH">PARAGRAPH</option>
@@ -52,11 +52,11 @@
             </select>
         </td>
         <td>
-            <button ng-click="equipmentModel.addContent(equipmentModel.contentType)" class="btn btn-success">
+            <button ng-click="model.addContent(model.contentType)" class="btn btn-success">
                 <span class="glyphicon glyphicon-plus"></span>
             </button>
         </td>
     </tr>
 </table>
 
-{{equipmentModel.equipment}}
+{{model.equipment}}

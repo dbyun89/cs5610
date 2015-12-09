@@ -7,7 +7,7 @@ module.exports = function(app, equipmentModel) {
     function addContent(req, res) {
         var equipmentId = req.params["equipmentId"];
         var contentType = req.params["contentType"];
-        equipmentModel
+        model
             .addContent(equipmentId, contentType)
             .then(function(equipment){
                 res.json(equipment);
@@ -15,7 +15,7 @@ module.exports = function(app, equipmentModel) {
     }
 
     function getEquipmentById(req, res) {
-        equipmentModel
+        model
             .getEquipmentById(req.params.id)
             .then(function(equipment){
                 res.json(equipment);
@@ -23,7 +23,7 @@ module.exports = function(app, equipmentModel) {
     }
 
     function getAllEquipments(req, res) {
-        equipmentModel
+        model
             .getAllEquipments()
             .then(function(equipments){
                 res.json(equipments);
@@ -32,7 +32,7 @@ module.exports = function(app, equipmentModel) {
 
     function addEquipment(req, res) {
         var equipment = req.body;
-        equipmentModel
+        model
             .addEquipment(equipment)
             .then(function(equipments){
                 res.json(equipments);

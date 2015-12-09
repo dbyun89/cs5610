@@ -4,14 +4,14 @@
         .controller("EquipmentListController", EquipmentListController);
 
     function EquipmentListController(EquipmentService) {
-        var equipmentModel = this;
-        equipmentModel.addEquipment = addEquipment;
+        var model = this;
+        model.addEquipment = addEquipment;
 
         function init() {
             EquipmentService
                 .getAllEquipments()
                 .then(function(equipments){
-                    equipmentModel.equipments = equipments;
+                    model.equipments = equipments;
                 });
         }
         init();
@@ -20,7 +20,7 @@
             EquipmentService
                 .addEquipment(equipment)
                 .then(function(equipments){
-                    equipmentModel.equipments = equipments;
+                    model.equipments = equipments;
                 });
         }
     }
