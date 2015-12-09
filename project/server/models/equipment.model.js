@@ -2,11 +2,31 @@ var q = require("q");
 
 module.exports = function(mongoose, db){
     var EquipmentSchema = mongoose.Schema({
-		name: String,
-		datePosted: {type: Date, default: Date.now},
-		price: Number,
-		category: String,
-		company: String
+        "label": String,
+        "created": {type: Date, default: Date.now},
+        "content": [{
+            "contentType": {
+                type: String,
+                enum: ["HEADING","LABEL", "PARAGRAPH", "LIST", "FORM"]
+            },
+            "heading": {
+                "size" : {type: Number, default:2},
+                "content" : {type: String, default: "Heading"}
+            },
+            "label" : {
+                "content" : {type: String, default: "Label"}
+            },
+            "paragraph" : {
+                "content" : {type: String, default: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"}
+            },
+            "list" : {
+                "listType" : {type: String, enum: ["ORDERED", "UNORDERED"], default: "ORDERED"},
+                "items": [String]
+            },
+            "form" : {
+                "formId" : String
+            }
+        }]
     }, {collection: "equipments"});
 
     var EquipmentModel = mongoose.equipmentModel("EquipmentModel", EquipmentSchema);

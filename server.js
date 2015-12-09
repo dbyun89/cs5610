@@ -33,6 +33,7 @@ var port      = process.env.OPENSHIFT_NODEJS_PORT || 3000;
 
 
 require("./index/server/app.js")(app, mongoose, db);
+require("./project/server/app.js")(app, mongoose, db);
 
 app.listen(port, ipaddress);
 
