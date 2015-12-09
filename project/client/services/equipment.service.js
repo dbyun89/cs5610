@@ -48,7 +48,7 @@
         function getEquipmentById(id) {
             var deferred = $q.defer();
 
-            $http.get("/rest/equipment"+id)
+            $http.get("/rest/equipment/"+id)
                 .success(function(equipment){
                     deferred.resolve(equipment);
                 });
