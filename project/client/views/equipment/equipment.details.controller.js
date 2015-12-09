@@ -6,33 +6,33 @@
     function EquipmentDetailsController(EquipmentService, $routeParams) {
         var equipmentId = $routeParams["equipmentId"];
 
-        var model = this;
-        model.addContent = addContent;
-        model.removeContent = removeContent;
+        var equipmentModel = this;
+        equipmentModel.addContent = addContent;
+        equipmentModel.removeContent = removeContent;
 
         function init() {
             EquipmentService
                 .getEquipmentById(equipmentId)
                 .then(function(equipment){
-                    model.equipment = equipment;
+                    equipmentModel.equipment = equipment;
                 });
         }
         init();
 
         function addContent(contentType) {
             EquipmentService
-                .addContent(model.equipment._id, contentType)
+                .addContent(equipmentModel.equipment._id, contentType)
                 .then(function(equipment){
-                    model.equipment = equipment;
+                    equipmentModel.equipment = equipment;
                 });
         }
 
         function removeContent(content) {
-            var contentIndex = model.equipment.content.indexOf(content);
+            var contentIndex = equipmentModel.equipment.content.indexOf(content);
             EquipmentService
-                .removeContent(model.equipment._id, contentIndex)
+                .removeContent(equipmentModel.equipment._id, contentIndex)
                 .then(function(equipment){
-                    model.equipment = equipment;
+                    equipmentModel.equipment = equipment;
                 });
         }
     }

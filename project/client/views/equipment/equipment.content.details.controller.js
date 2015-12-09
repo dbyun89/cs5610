@@ -7,14 +7,14 @@
         var equipmentId = $routeParams["equipmentId"];
         var contentIndex = $routeParams["index"];
 
-        var model = this;
+        var equipmentModel = this;
 
         function init() {
             EquipmentService
                 .getEquipmentById(equipmentId)
                 .then(function(equipment){
-                    model.equipment = equipment;
-                    model.content = model.equipment.content[contentIndex];
+                    equipmentModel.equipment = equipment;
+                    equipmentModel.content = equipmentModel.equipment.content[contentIndex];
                 });
         }
         init();

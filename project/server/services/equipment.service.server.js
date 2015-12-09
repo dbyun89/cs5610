@@ -1,4 +1,4 @@
-module.exports = function(app, model) {
+module.exports = function(app, equipmentModel) {
     app.post("/api/lecture/mongo/pe/equipment", addEquipment);
     app.get("/api/lecture/mongo/pe/equipment", getAllEquipments);
     app.get("/api/lecture/mongo/pe/equipment/:id", getEquipmentById);
@@ -7,7 +7,7 @@ module.exports = function(app, model) {
     function addContent(req, res) {
         var equipmentId = req.params["equipmentId"];
         var contentType = req.params["contentType"];
-        model
+        equipmentModel
             .addContent(equipmentId, contentType)
             .then(function(equipment){
                 res.json(equipment);
@@ -15,7 +15,7 @@ module.exports = function(app, model) {
     }
 
     function getEquipmentById(req, res) {
-        model
+        equipmentModel
             .getEquipmentById(req.params.id)
             .then(function(equipment){
                 res.json(equipment);
@@ -23,7 +23,7 @@ module.exports = function(app, model) {
     }
 
     function getAllEquipments(req, res) {
-        model
+        equipmentModel
             .getAllEquipments()
             .then(function(equipments){
                 res.json(equipments);
@@ -32,7 +32,7 @@ module.exports = function(app, model) {
 
     function addEquipment(req, res) {
         var equipment = req.body;
-        model
+        equipmentModel
             .addEquipment(equipment)
             .then(function(equipments){
                 res.json(equipments);
