@@ -13,7 +13,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(multer());
 
 var connectionString = process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://localhost/cs5610';
-//console.log(connectionString);
+
+//var connectionString = process.env.OPENSHIFT_MONGODB_DB_URL
+console.log(connectionString);
 //mongoose.connect(connectionString);
 
 if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD) {
@@ -30,9 +32,6 @@ app.use(express.static(__dirname));
 
 var ipaddress = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 var port      = process.env.OPENSHIFT_NODEJS_PORT || 3000;
-
-
-require("./index/server/app.js")(app, mongoose, db);
 
 app.listen(port, ipaddress);
 
