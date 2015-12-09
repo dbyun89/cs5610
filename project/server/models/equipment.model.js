@@ -9,7 +9,7 @@ module.exports = function(mongoose, db){
 		company: String
     }, {collection: "equipment"});
 
-    var EquipmentModel = mongoose.model("EquipmentModel", EquipmentSchema);
+    var equipment = mongoose.model("equipment", EquipmentSchema);
 
     var api = {
         addEquipment: addEquipment,
@@ -22,7 +22,7 @@ module.exports = function(mongoose, db){
     function addContent(equipmentId, contentType) {
         var deferred = q.defer();
 
-        EquipmentModel.findById(equipmentId, function(err, equipment){
+        equipment.findById(equipmentId, function(err, equipment){
             var content = {
                 contentType: contentType,
                 list: {listType: 'ORDERED', items: ["Item 1", "Item 2", "Item 3"]}
@@ -39,7 +39,7 @@ module.exports = function(mongoose, db){
     function getEquipmentById(id) {
         var deferred = q.defer();
 
-        EquipmentModel.findById(id, function(err, equipment){
+        equipment.findById(id, function(err, equipment){
             deferred.resolve(equipment);
         });
 
@@ -49,7 +49,7 @@ module.exports = function(mongoose, db){
     function getAllEquipments() {
         var deferred = q.defer();
 
-        EquipmentModel.find(function(err, equipments){
+        equipment.find(function(err, equipments){
             deferred.resolve(equipments);
         });
 
@@ -59,8 +59,8 @@ module.exports = function(mongoose, db){
     function addEquipment(equipment) {
         var deferred = q.defer();
 
-        EquipmentModel.create(equipment, function(err, doc){
-            EquipmentModel.find(function(err, equipments){
+        equipment.create(equipment, function(err, doc){
+            equipment.find(function(err, equipments){
                 deferred.resolve(equipments);
             });
         });
