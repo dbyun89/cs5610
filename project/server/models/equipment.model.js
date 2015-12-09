@@ -9,7 +9,7 @@ module.exports = function(mongoose, db){
 		company: String
     }, {collection: "equipments"});
 
-    var EquipmentModel = mongoose.model("EquipmentModel", EquipmentSchema);
+    var EquipmentModel = mongoose.equipmentModel("EquipmentModel", EquipmentSchema);
 
     var api = {
         addEquipment: addEquipment,
