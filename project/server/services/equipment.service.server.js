@@ -1,41 +1,41 @@
-module.exports = function(app, model){
-    app.post("/api/lecture/mongo/pe/page", addPage);
-    app.get("/api/lecture/mongo/pe/page", getAllPages);
-    app.get("/api/lecture/mongo/pe/page/:id", getPageById);
-    app.post("/api/lecture/mongo/pe/page/:pageId/content/:contentType", addContent);
+module.exports = function(app, model) {
+    app.post("/rest/equipment", addEquipment);
+    app.get("/rest/equipment", getAllEquipments);
+    app.get("/rest/equipment/:id", getEquipmentById);
+    app.post("/rest/equipment/:equipmentId/content/:contentType", addContent);
 
     function addContent(req, res) {
-        var pageId = req.params["pageId"];
+        var equipmentId = req.params["equipmentId"];
         var contentType = req.params["contentType"];
         model
-            .addContent(pageId, contentType)
-            .then(function(page){
-                res.json(page);
+            .addContent(equipmentId, contentType)
+            .then(function(equipment){
+                res.json(equipment);
             });
     }
 
-    function getPageById(req, res) {
+    function getEquipmentById(req, res) {
         model
-            .getPageById(req.params.id)
-            .then(function(page){
-                res.json(page);
+            .getEquipmentById(req.params.id)
+            .then(function(equipment){
+                res.json(equipment);
             });
     }
 
-    function getAllPages(req, res) {
+    function getAllEquipments(req, res) {
         model
-            .getAllPages()
-            .then(function(pages){
-                res.json(pages);
+            .getAllEquipments()
+            .then(function(equipments){
+                res.json(equipments);
             });
     }
 
-    function addPage(req, res) {
-        var page = req.body;
+    function addEquipment(req, res) {
+        var equipment = req.body;
         model
-            .addPage(page)
-            .then(function(pages){
-                res.json(pages);
+            .addEquipment(equipment)
+            .then(function(equipments){
+                res.json(equipments);
             });
     }
 };

@@ -1,41 +1,41 @@
-module.exports = function(app, model) {
-    app.post("/rest/equipment", addEquipment);
-    app.get("/rest/equipment", getAllEquipments);
-    app.get("/rest/equipment/:id", getEquipmentById);
-    app.post("/rest/equipment/:equipmentId/content/:contentType", addContent);
+module.exports = function(app, model){
+    app.post("/api/lecture/mongo/pe/page", addPage);
+    app.get("/api/lecture/mongo/pe/page", getAllPages);
+    app.get("/api/lecture/mongo/pe/page/:id", getPageById);
+    app.post("/api/lecture/mongo/pe/page/:pageId/content/:contentType", addContent);
 
     function addContent(req, res) {
-        var equipmentId = req.params["equipmentId"];
+        var pageId = req.params["pageId"];
         var contentType = req.params["contentType"];
         model
-            .addContent(equipmentId, contentType)
-            .then(function(equipment){
-                res.json(equipment);
+            .addContent(pageId, contentType)
+            .then(function(page){
+                res.json(page);
             });
     }
 
-    function getEquipmentById(req, res) {
+    function getPageById(req, res) {
         model
-            .getEquipmentById(req.params.id)
-            .then(function(equipment){
-                res.json(equipment);
+            .getPageById(req.params.id)
+            .then(function(page){
+                res.json(page);
             });
     }
 
-    function getAllEquipments(req, res) {
+    function getAllPages(req, res) {
         model
-            .getAllEquipments()
-            .then(function(equipments){
-                res.json(equipments);
+            .getAllPages()
+            .then(function(pages){
+                res.json(pages);
             });
     }
 
-    function addEquipment(req, res) {
-        var equipment = req.body;
+    function addPage(req, res) {
+        var page = req.body;
         model
-            .addEquipment(equipment)
-            .then(function(equipments){
-                res.json(equipments);
+            .addPage(page)
+            .then(function(pages){
+                res.json(pages);
             });
     }
 };
