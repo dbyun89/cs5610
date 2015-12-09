@@ -1,6 +1,6 @@
 (function(){
     angular
-        .module("WhiteBoardApp")
+        .module("PageEditorApp")
         .controller("PageContentEditorController", PageContentEditorController);
 
     function PageContentEditorController(PageService, $routeParams) {
@@ -12,9 +12,9 @@
         function init() {
             PageService
                 .getPageById(pageId)
-                .then(function(pages){
-                    model.pages = pages;
-                    model.content = model.pages.content[contentIndex];
+                .then(function(page){
+                    model.page = page;
+                    model.content = model.page.content[contentIndex];
                 });
         }
         init();

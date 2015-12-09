@@ -1,6 +1,6 @@
 (function(){
     angular
-        .module("WhiteBoardApp")
+        .module("PageEditorApp")
         .factory("PageService", PageService);
 
     function PageService($http, $q) {
@@ -15,18 +15,18 @@
         function addContent(pageId, contentType) {
             var deferred = $q.defer();
 
-            $http.post("/rest/pages/" + pageId + "/content/" + contentType)
-                .success(function(pages){
-                    deferred.resolve(pages);
+            $http.post("/api/lecture/mongo/pe/page/" + pageId + "/content/" + contentType)
+                .success(function(page){
+                    deferred.resolve(page);
                 });
 
             return deferred.promise;
         }
 
-        function addPage(pages) {
+        function addPage(page) {
             var deferred = $q.defer();
 
-            $http.post("/rest/pages", pages)
+            $http.post("/api/lecture/mongo/pe/page", page)
                 .success(function(pages){
                     deferred.resolve(pages);
                 });
@@ -37,7 +37,7 @@
         function getAllPages() {
             var deferred = $q.defer();
 
-            $http.get("/rest/pages")
+            $http.get("/api/lecture/mongo/pe/page")
                 .success(function(pages){
                     deferred.resolve(pages);
                 });
@@ -48,9 +48,9 @@
         function getPageById(id) {
             var deferred = $q.defer();
 
-            $http.get("/rest/pages/"+id)
-                .success(function(pages){
-                    deferred.resolve(pages);
+            $http.get("/api/lecture/mongo/pe/page/"+id)
+                .success(function(page){
+                    deferred.resolve(page);
                 });
 
             return deferred.promise;

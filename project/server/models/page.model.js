@@ -1,7 +1,6 @@
 var q = require("q");
 
 module.exports = function(mongoose, db){
-	console.log("in server/models/page.model.js");
     var PageSchema = mongoose.Schema({
         "label": String,
         "created": {type: Date, default: Date.now},
@@ -43,13 +42,13 @@ module.exports = function(mongoose, db){
     function addContent(pageId, contentType) {
         var deferred = q.defer();
 
-        PageModel.findById(pageId, function(err, pages){
+        PageModel.findById(pageId, function(err, page){
             var content = {
                 contentType: contentType,
                 list: {listType: 'ORDERED', items: ["Item 1", "Item 2", "Item 3"]}
             };
-            pages.content.push(content);
-            pages.save(function(err, doc){
+            page.content.push(content);
+            page.save(function(err, doc){
                 deferred.resolve(doc);
             });
         });
@@ -60,8 +59,8 @@ module.exports = function(mongoose, db){
     function getPageById(id) {
         var deferred = q.defer();
 
-        PageModel.findById(id, function(err, pages){
-            deferred.resolve(pages);
+        PageModel.findById(id, function(err, page){
+            deferred.resolve(page);
         });
 
         return deferred.promise;
@@ -77,10 +76,10 @@ module.exports = function(mongoose, db){
         return deferred.promise;
     }
 
-    function addPage(pages) {
+    function addPage(page) {
         var deferred = q.defer();
 
-        PageModel.create(pages, function(err, doc){
+        PageModel.create(page, function(err, doc){
             PageModel.find(function(err, pages){
                 deferred.resolve(pages);
             });

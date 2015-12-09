@@ -1,6 +1,6 @@
 (function(){
     angular
-        .module("WhiteBoardApp")
+        .module("PageEditorApp")
         .controller("PageDetailsController", PageDetailsController);
 
     function PageDetailsController(PageService, $routeParams) {
@@ -13,26 +13,26 @@
         function init() {
             PageService
                 .getPageById(pageId)
-                .then(function(pages){
-                    model.pages = pages;
+                .then(function(page){
+                    model.page = page;
                 });
         }
         init();
 
         function addContent(contentType) {
             PageService
-                .addContent(model.pages._id, contentType)
-                .then(function(pages){
-                    model.pages = pages;
+                .addContent(model.page._id, contentType)
+                .then(function(page){
+                    model.page = page;
                 });
         }
 
         function removeContent(content) {
-            var contentIndex = model.pages.content.indexOf(content);
+            var contentIndex = model.page.content.indexOf(content);
             PageService
-                .removeContent(model.pages._id, contentIndex)
-                .then(function(pages){
-                    model.pages = pages;
+                .removeContent(model.page._id, contentIndex)
+                .then(function(page){
+                    model.page = page;
                 });
         }
     }

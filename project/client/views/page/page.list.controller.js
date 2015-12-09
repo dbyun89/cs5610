@@ -1,6 +1,6 @@
 (function(){
     angular
-        .module("WhiteBoardApp")
+        .module("PageEditorApp")
         .controller("PageListController", PageListController);
 
     function PageListController(PageService) {
@@ -16,9 +16,9 @@
         }
         init();
 
-        function addPage(pages) {
+        function addPage(page) {
             PageService
-                .addPage(pages)
+                .addPage(page)
                 .then(function(pages){
                     model.pages = pages;
                 });
