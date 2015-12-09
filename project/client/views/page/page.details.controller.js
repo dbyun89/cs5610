@@ -1,6 +1,6 @@
 (function(){
     angular
-        .module("PageEditorApp")
+        .module("WhiteBoardApp")
         .controller("PageDetailsController", PageDetailsController);
 
     function PageDetailsController(PageService, $routeParams) {

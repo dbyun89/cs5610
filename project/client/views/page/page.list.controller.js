@@ -1,6 +1,6 @@
 (function(){
     angular
-        .module("PageEditorApp")
+        .module("WhiteBoardApp")
         .controller("PageListController", PageListController);
 
     function PageListController(PageService) {
