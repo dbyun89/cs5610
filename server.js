@@ -39,7 +39,7 @@ app.listen(port, ipaddress);
 
 
 //Equipment Schema
-var EquipmentSchema = new mongoose.Schema ({
+/* var EquipmentSchema = new mongoose.Schema ({
 	name: String,
 	datePosted: {type: Date, default: Date.now},
 	price: Number,
@@ -60,7 +60,7 @@ app.get("/rest/equipment", function(req, res) {
 		}
 		
 	});
-});
+}); */
 
 
 //User Schema
