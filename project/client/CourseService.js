@@ -28,7 +28,7 @@
 		
 		function findEquipments(callback) {
 			console.log("In CourseService.js" + callback);
-			$http.get("/rest/equipment")
+			$http.get("/api/lecture/mongo/pe/equipment")
 				.success(callback)
 		}
     }

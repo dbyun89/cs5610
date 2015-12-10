@@ -5,12 +5,22 @@ var bodyParser = require('body-parser');
 var multer = require ('multer');
 var q = require ('q');
 
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
+
+
 var mongoose = require('mongoose');
 //mongoose.connect('mongodb://localhost/test'); //local
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(multer());
+app.use(session({ secret: 'this is the secret' }));
+app.use(cookieParser());
+app.use(passport.initialize());
+app.use(passport.session());
 
 var connectionString = process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://localhost/cs5610';
 //console.log(connectionString);
@@ -66,14 +76,23 @@ app.get("/rest/equipment", function(req, res) {
 
 //User Schema
 var UserSchema = new mongoose.Schema ({
+	username: String,
 	name: String,
 	password: String,
 	dateCreated: {type: Date, default: Date.now},
 	email: String,
 	role: String
-}, {collection: "user"});	
+}, {collection: "user"});
 
 var user = mongoose.model("user", UserSchema);
+
+
+
+
+
+
+
+
 
 app.get("/rest/user", function(req, res) {
 	
