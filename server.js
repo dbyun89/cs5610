@@ -22,6 +22,9 @@ app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
 
+
+
+
 var connectionString = process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://localhost/cs5610';
 //console.log(connectionString);
 //mongoose.connect(connectionString);
