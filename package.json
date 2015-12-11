@@ -37,5 +37,5 @@
   "devDependencies": {},
   "bundleDependencies": [],
   "private": true,
-  "main": "serverPassportJS.js"
+  "main": "server.js"
 }

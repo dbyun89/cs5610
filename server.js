@@ -22,7 +22,29 @@ app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
 
+passport.use(new LocalStrategy(
+function(username, password, done)
+{
+    UserModel.findOne({username: username, password: password}, function(err, user)
+    {
+        if (err) { return done(err); }
+        if (!user) { return done(null, false); }
+        return done(null, user);
+    })
+}));
 
+passport.serializeUser(function(user, done)
+{
+    done(null, user);
+});
+
+passport.deserializeUser(function(user, done)
+{
+    UserModel.findById(user._id, function(err, user)
+    {
+        done(err, user);
+    });
+});
 
 
 var connectionString = process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://localhost/cs5610';
@@ -39,14 +61,17 @@ if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD) {
 
 var db = mongoose.connect(connectionString);
 
-app.use(express.static(__dirname));
+app.use(express.static(__dirname + '/passportjs'));
 
 var ipaddress = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 var port      = process.env.OPENSHIFT_NODEJS_PORT || 3000;
 
 
 // require("./index/server/app.js")(app, mongoose, db);
-require("./project/server/app.js")(app, mongoose, db);
+//require("./project/server/app.js")(app, mongoose, db);
+
+var UserModel = require("./user/user.model.js")();
+var UserService = require("./user/user.service.js")(app, UserModel, passport);
 
 app.listen(port, ipaddress);
 
