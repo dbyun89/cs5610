@@ -6,7 +6,8 @@ var LocalStrategy = require('passport-local').Strategy;
 var cookieParser  = require('cookie-parser');
 var session       = require('express-session');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/wbdb');
+
+//mongoose.connect('mongodb://localhost/wbdb');
 
 app.use(express.static(__dirname));
 
@@ -41,7 +42,7 @@ passport.deserializeUser(function(user, done)
     });
 });
 
-var connectionString = process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://localhost/cs5610';
+var connectionString = process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://localhost/wbdb';
 
 if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD) {
     connectionString = process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
