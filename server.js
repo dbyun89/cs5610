@@ -70,8 +70,8 @@ var port      = process.env.OPENSHIFT_NODEJS_PORT || 3000;
 // require("./index/server/app.js")(app, mongoose, db);
 //require("./project/server/app.js")(app, mongoose, db);
 
-var UserModel = require("./user/user.model.js")();
-var UserService = require("./user/user.service.js")(app, UserModel, passport);
+var UserModel = require("./passportjs/user/user.model.js")();
+var UserService = require("./passportjs/user/user.service.js")(app, UserModel, passport);
 
 app.listen(port, ipaddress);
 
