@@ -64,3 +64,18 @@ var UserService = require("./user/user.service.js")(app, UserModel, passport);
 
 //app.listen(3000);
 app.listen(port, ipaddress);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

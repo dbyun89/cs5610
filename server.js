@@ -1,17 +1,14 @@
 var express = require('express');
 var app = express();
-
 var bodyParser = require('body-parser');
 var multer = require ('multer');
 var q = require ('q');
-
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
-
-
 var mongoose = require('mongoose');
+
 //mongoose.connect('mongodb://localhost/test'); //local
 
 app.use(bodyParser.json());
@@ -47,7 +44,7 @@ passport.deserializeUser(function(user, done)
 });
 
 
-var connectionString = process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://localhost/cs5610';
+var connectionString = process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://localhost/wbdb';
 //console.log(connectionString);
 //mongoose.connect(connectionString);
 
@@ -61,7 +58,7 @@ if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD) {
 
 var db = mongoose.connect(connectionString);
 
-app.use(express.static(__dirname + '/passportjs'));
+app.use(express.static(__dirname + '/passportjs/public'));
 
 var ipaddress = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 var port      = process.env.OPENSHIFT_NODEJS_PORT || 3000;

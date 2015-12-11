@@ -81,6 +81,8 @@ module.exports = function(app, User, passport)
   
   app.put("/rest/update", function(req, res)
   {
+	console.log("entering user/user.service.js user update");
+	console.log(req.body);
     User.findById(req.body._id, function(err, foundUser)
     {
       var user = req.body;
