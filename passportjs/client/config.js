@@ -1,16 +1,10 @@
 (function(){
     angular
-        .module("PageEditorApp")
+        .module("WhiteBoardApp")
         .config(Configuration);
 
     function Configuration($routeProvider) {
         $routeProvider
-			
-		
-		
-		
-		
-		
             .when("/page", {
                 templateUrl: "page/page.list.view.html",
                 controller: "PageListController",

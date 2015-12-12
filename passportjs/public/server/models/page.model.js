@@ -5,6 +5,7 @@ module.exports = function(mongoose, db) {
         "label": String,
         "created": {type: Date, default: Date.now},
 		"createdBy": {type: String, default: "DavidByun"},
+		"price": String,
         "content": [{
             "contentType": {
                 type: String,

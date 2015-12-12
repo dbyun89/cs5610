@@ -21,7 +21,7 @@
         }
         else
         {
-          vm.message = "User already exists";
+          vm.message = "User already exists, try again with a different Username";
         }
       });
     }

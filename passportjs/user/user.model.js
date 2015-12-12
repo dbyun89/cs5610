@@ -9,6 +9,11 @@ module.exports = function()
     email:     String,
     firstName: String,
     lastName:  String,
+	dateCreated: {type: Date, default: Date.now},
+	phone: String,
+	equipmentPosted: [String],
+	equipmentBought: [String],
+	usersLiked: [String],
     roles:     [String]
   }, {collection: "user"});
   

@@ -58,14 +58,17 @@ if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD) {
 
 var db = mongoose.connect(connectionString);
 
-app.use(express.static(__dirname + '/passportjs/public'));
+//app.use(express.static(__dirname + '/passportjs/public'));
+app.use(express.static(__dirname));
 
 var ipaddress = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 var port      = process.env.OPENSHIFT_NODEJS_PORT || 3000;
 
 
-// require("./index/server/app.js")(app, mongoose, db);
+//require("./index/server/app.js")(app, mongoose, db);
 //require("./project/server/app.js")(app, mongoose, db);
+
+require("./passportjs/public/server/app.js")(app, mongoose, db);
 
 var UserModel = require("./passportjs/user/user.model.js")();
 var UserService = require("./passportjs/user/user.service.js")(app, UserModel, passport);
@@ -100,7 +103,7 @@ app.get("/rest/equipment", function(req, res) {
 
 
 //User Schema
-var UserSchema = new mongoose.Schema ({
+/* var UserSchema = new mongoose.Schema ({
 	username: String,
 	name: String,
 	password: String,
@@ -110,14 +113,6 @@ var UserSchema = new mongoose.Schema ({
 }, {collection: "user"});
 
 var user = mongoose.model("user", UserSchema);
-
-
-
-
-
-
-
-
 
 app.get("/rest/user", function(req, res) {
 	
@@ -131,7 +126,7 @@ app.get("/rest/user", function(req, res) {
 		}
 		
 	});
-});
+}); */
 
 
 
