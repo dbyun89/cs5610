@@ -4,31 +4,10 @@ module.exports = function(mongoose, db) {
     var PageSchema = mongoose.Schema({
         "label": String,
         "created": {type: Date, default: Date.now},
-		"createdBy": {type: String, default: "DavidByun"},
+		"createdBy": {type: String, default: "David Byun"},
 		"price": String,
-        "content": [{
-            "contentType": {
-                type: String,
-                enum: ["HEADING","LABEL", "PARAGRAPH", "LIST", "FORM"]
-            },
-            "heading": {
-                "size" : {type: Number, default:2},
-                "content" : {type: String, default: "Heading"}
-            },
-            "label" : {
-                "content" : {type: String, default: "Label"}
-            },
-            "paragraph" : {
-                "content" : {type: String, default: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"}
-            },
-            "list" : {
-                "listType" : {type: String, enum: ["ORDERED", "UNORDERED"], default: "ORDERED"},
-                "items": [String]
-            },
-            "form" : {
-                "formId" : String
-            }
-        }]
+		"category": String,
+		"company": String
     }, {collection: "pages"});
 
     var PageModel = mongoose.model("PageModel", PageSchema);

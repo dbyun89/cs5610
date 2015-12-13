@@ -39,7 +39,10 @@
 			.when("/page", {
 				templateUrl: "page/page.list.view.html",
 				controller: "PageListController",
-				controllerAs: "model"
+				controllerAs: "model",
+				resolve    : {
+				loggedin : checkLoggedin
+			  }
 			})
 			.when("/page/:pageId/details",
 			{

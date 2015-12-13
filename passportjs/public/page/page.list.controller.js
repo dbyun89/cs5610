@@ -3,8 +3,11 @@
         .module("WhiteBoardApp")
         .controller("PageListController", PageListController);
 
-    function PageListController(PageService) {
+    function PageListController(PageService, UserService) {
         var model = this;
+		
+
+		
         model.addPage = addPage;
 
         function init() {
@@ -18,6 +21,7 @@
 
         function addPage(page) {
             PageService
+
                 .addPage(page)
                 .then(function(pages){
                     model.pages = pages;
