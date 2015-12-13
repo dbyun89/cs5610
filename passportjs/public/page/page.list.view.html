@@ -1,33 +1,23 @@
-<h2>Page List</h2>
+<h2>Post Equipment</h2>
 
-{{page}}
+{{page.label}}
 
 <table class="table">
 	<tr>
 		<td>
 			<input ng-model="model.page.label" class="form-control" placeholder="Page Name"/>
-			<input ng-model="model.page.price" class="form-control" placeholder="Page Price" type="price"/>
-
-<!-- <input  ng-model="user.username"  class="form-control" placeholder="username"/>
-<input  ng-model="user.password"  class="form-control" placeholder="password"  type="password"/>
-<input  ng-model="user.password2" class="form-control" placeholder="password2" type="password"/>
-<input  ng-model="user.email"     class="form-control" placeholder="email"     type="email"/>
-<input  ng-model="user.firstName" class="form-control" placeholder="firstName" type="firstName"/>
-<input  ng-model="user.lastName" class="form-control" placeholder="lastName" type="lastName"/>	 -->		
-			
-			
-			
-			
-			
-			
-			
-        </td>
-        <td>
-            <button ng-click="model.addPage(model.page)" class="btn btn-success">
-                <span class="glyphicon glyphicon-plus"></span>
-            </button>
+			<input ng-model="model.page.price" class="form-control" placeholder="Page Price"/>
+			<input ng-model="model.page.category" class="form-control" placeholder="Page Category"/>
+			<input ng-model="model.page.company" class="form-control" placeholder="Page Company"/>
         </td>
     </tr>
+
+</table>
+
+		<button ng-click="model.addPage(model.page)" class="btn btn-primary btn-block">List Equipment
+		</button>	
+<table class="table">
+	<h2>View Availible Equipment</h2>
     <tr ng-repeat="page in model.pages">
         <td>
             <a href="#/page/{{page._id}}/details">
