@@ -26,30 +26,31 @@ db.equipment.insert({name:"Steel Wheelbarrow", datePosted: new Date(), price:99.
 
 //User Schema
 var UserSchema = new mongoose.Schema ({
-	name: String,
+	username: String,
+	firstName: String,
+	lastName: String,
 	password: String,
 	dateCreated: {type: Date, default: Date.now},
 	email: String,
-	role: String
-	//equipmentPosted: Array?
-}, {collection: "user"});	
+	phone: String,
+	roles: [String],
+	usersLiked: [String],
+	equipmentPosted: [String],
+	equipmentBought: [String]
+}, {collection: "user"});
 
 Sample User List
 db.user.insert({name:"Text", password:"Text", email:"Text", dateCreated: new Date(), role:"user Or admin"})
 
 db.user.insert({name:"Justus Arnold", password:"JA123", email:"JArnold@GardenEquipment.com", dateCreated: new Date(), role:"user"})
 
-db.user.insert({name:"Kenzie Arjuna", password:"KA123", email:"KArjuna@GardenEquipment.com", dateCreated: new Date(), role:"user"})
-
-db.user.insert({name:"David Byun", password:"DB123", email:"DByun@GardenEquipmentAdmin.com", dateCreated: new Date(), role:"admin"})
-
-db.user.insert({name:"Sextilius Scottie", password:"SS123", email:"SScottie@GardenEquipment.com", dateCreated: new Date(), role:"user"})
+db.user.insert({username:"Kevin1", password:"Text", email:"Text", dateCreated: new Date(), role:"user","admin"})
 
 
 Sample Pages List
 db.pages.insert({label: "example label", created: new Date()})
 
-
+db.pages.insert({username:"Kevin1", password:"Text", email:"Text", dateCreated: new Date(), role:["user","admin"]})
 
 
 
