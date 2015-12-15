@@ -4,19 +4,23 @@
 <table class="table table-bordered">
 	<tr>
 		<th>Username:</th>
+		<span ng-show="currentUser">
 		<th>Password:</th>
+		</span>
 		<th>First Name:</th>
 		<th>Last Name:</th>
 		<th>Email:</th>
 		<th>Roles:</th>
 	</tr>
     <tr>
-      <td>{{currentUser.username}}</td>
-      <td>{{currentUser.password}}</td>
-      <td>{{currentUser.firstName}}</td>
-      <td>{{currentUser.lastName}}</td>
-      <td>{{currentUser.email}} </td>
-      <td>{{currentUser.roles}}</td>
+		<td>{{currentUser.username}}</td>
+		<span ng-show="currentUser">
+		<td>{{currentUser.password}}</td>
+		</span>
+		<td>{{currentUser.firstName}}</td>
+		<td>{{currentUser.lastName}}</td>
+		<td>{{currentUser.email}} </td>
+		<td>{{currentUser.roles}}</td>
 	</tr>
 </table>
 Equipment Posted by {{currentUser.username}}:

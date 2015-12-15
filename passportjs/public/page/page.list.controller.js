@@ -6,7 +6,6 @@
     function PageListController(PageService, UserService) {
         var model = this;
 		
-
 		
         model.addPage = addPage;
 

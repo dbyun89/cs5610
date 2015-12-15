@@ -34,7 +34,7 @@
 				admin    : checkAdmin
 			  }
 			})
-		
+
 			
 			.when("/page", {
 				templateUrl: "page/page.list.view.html",
