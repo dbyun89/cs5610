@@ -1,0 +1,30 @@
+{
+  "name": "white-board-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jannunzi/passportjs.git"
+  },
+  "author": "Jose Annunziato",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jannunzi/passportjs/issues"
+  },
+  "homepage": "https://github.com/jannunzi/passportjs#readme",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "cookie-parser": "^1.3.5",
+    "express": "^4.13.3",
+    "express-session": "^1.11.3",
+    "mongoose": "^4.1.3",
+    "multer": "^1.0.3",
+    "passport": "^0.3.0",
+    "passport-local": "^1.0.0"
+  }
+}

@@ -1,6 +1,6 @@
 (function(){
     angular
-        .module("WhiteBoardApp")
+        .module("PageEditorApp")
         .config(Configuration);
 
     function Configuration($routeProvider) {

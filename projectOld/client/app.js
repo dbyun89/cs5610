@@ -2,3 +2,4 @@
     angular
         .module("WhiteBoardApp", ["ngRoute"]);
 })();
+

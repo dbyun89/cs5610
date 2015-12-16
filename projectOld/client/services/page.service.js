@@ -1,6 +1,6 @@
 (function(){
     angular
-        .module("PageEditorApp")
+        .module("WhiteBoardApp")
         .factory("PageService", PageService);
 
     function PageService($http, $q) {
