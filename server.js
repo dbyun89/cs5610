@@ -42,7 +42,7 @@ passport.deserializeUser(function(user, done)
 });
 
 
-var connectionString = process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://localhost/wbdb';
+var connectionString = process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://localhost/cs5610';
 //console.log(connectionString);
 //mongoose.connect(connectionString);
 
