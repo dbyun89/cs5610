@@ -4,8 +4,8 @@
 		.controller("ProfileController", ProfileController);
 
 	function ProfileController(UserService) {
-		var vm = this;
-		vm.update = update;
+		var model = this;
+		model.update = update;
     
 		function update(user) {
 			UserService.update(user, function(response) {
