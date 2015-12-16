@@ -1,4 +1,5 @@
 <h2>Post Equipment</h2>
+<img src="../images/Garden-Supplies.jpg" alt="Garden-Supplies" style="width:529px;height:278px;">
 <hr>
 model.page.createdBy = {{currentUser.username}};
 
@@ -29,15 +30,3 @@ model.page.createdBy = {{currentUser.username}};
 <button ng-click="model.addPage(model.page)" class="btn btn-primary btn-block">List Equipment
 </button>
 </form>		
-		
-<table class="table">
-	<h2>View Available Equipment</h2>
-    <tr ng-repeat="page in model.pages">
-        <td>
-            <a href="#/page/{{page._id}}/details">
-                {{page.label}}
-            </a>
-        </td>
-        <td>&nbsp;</td>
-    </tr>
-</table>

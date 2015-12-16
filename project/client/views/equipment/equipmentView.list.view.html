@@ -1,11 +1,13 @@
 <h2>Browse All Equipment</h2>
+<img src="../images/BrowsePicture.jpeg" alt="Browse" style="width:529px;height:278px;">
 <hr>
 <table class="table">
-
     <tr ng-repeat="page in model.pages">
         <td>
             <a href="#/page/{{page._id}}/details">
-                {{page.label}}
+					Equipment Name: {{page.label}}<br>Dated Created: {{page.created}}<br>
+					Created By: {{page.createdBy}}<br>Equipment Price: {{page.price}}<br>
+					Equipment Category: {{page.category}}<br>Equipment Company {{page.company}}
             </a>
         </td>
         <td>&nbsp;</td>

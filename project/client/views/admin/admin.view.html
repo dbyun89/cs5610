@@ -1,4 +1,5 @@
 <h1>Admin Page</h1>
+<img src="../images/AdminPicture.png" alt="Admin" style="width:185px;height:168px;">
 <hr>
 <h2>Modify Selected User</h2>
 <table class="table table-striped">
@@ -41,12 +42,12 @@
 			<td>{{user.roles}}</td>
 			<td>
 			<button ng-click="controller.removeUser(user._id)" class="btn btn-danger">
-			<span class="glyphicon glyphicon-remove"></span>
+				<span class="glyphicon glyphicon-remove"></span>
 			</button>
 			<button ng-click="controller.selectUser(user._id)" class="btn btn-info">
-			<span class="glyphicon glyphicon-pencil"></span>
+				<span class="glyphicon glyphicon-pencil"></span>
 			</button>
-		</td>
+			</td>
 		</tr>
 	</tbody>
 </table>
