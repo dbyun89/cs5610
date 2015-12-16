@@ -116,6 +116,11 @@ var checkAdmin = function($q, $timeout, $http, $location, $rootScope) {
 			$rootScope.currentUser = user;
 			deferred.resolve();
 		}
+		else {
+			$rootScope.errorMessage = 'You need to be an admin.';
+			deferred.reject();
+			$location.url('/login');
+		}
 	});
   
 	return deferred.promise;
