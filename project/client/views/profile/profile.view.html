@@ -21,8 +21,19 @@
 		<td>{{currentUser.roles}}</td>
 	</tr>
 </table>
+<hr>
+
 Equipment Posted by {{currentUser.username}}:
-{{currentUser.equipmentPosted}}
+<table class="table">
+    <tr ng-repeat="page in model.pages">
+        <td>
+            <a href="#/page/{{page._id}}/details">
+					{{currentUser.equipmentPosted}}
+            </a>
+        </td>
+    </tr>
+</table>
+
 <br><br>
 
 <hr>
