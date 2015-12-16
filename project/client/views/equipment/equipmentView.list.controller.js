@@ -5,9 +5,6 @@
 
 	function PageViewController(PageService, UserService) {
 		var model = this;
-		
-		
-		model.addPage = addPage;
 
 		function init() {
 			PageService
@@ -17,14 +14,5 @@
 				});
 		}
 		init();
-
-		function addPage(page) {
-			PageService
-
-				.addPage(page)
-				.then(function(pages){
-					model.pages = pages;
-				});
-		}
 	}
 }) ();

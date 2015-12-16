@@ -1,7 +1,9 @@
 (function() {
 	angular
 		.module("WhiteBoardApp")
-		.controller("EquipmentSearchController", EquipmentSearchController);
+		.controller("EquipmentSearchController", 
+
+EquipmentSearchController);
 
 	function EquipmentSearchController(PageService, UserService) {
 		var model = this;

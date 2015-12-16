@@ -5,10 +5,10 @@
 
 	function PageService($http, $q) {
 		var api = {
-			getAllPages: getAllPages,
-			getPageById: getPageById,
-			addPage: addPage,
-			addContent: addContent
+			getAllPages : getAllPages,
+			getPageById : getPageById,
+			addPage     : addPage,
+			addContent  : addContent
 		};
 		return api;
 
@@ -22,7 +22,7 @@
 
 			return deferred.promise;
 		}
-
+		
 		function addPage(page) {
 			var deferred = $q.defer();
 

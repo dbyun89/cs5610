@@ -62,7 +62,37 @@
 				controller: "PageContentEditorController",
 				controllerAs: "model"
 			})	 */
-		
+			.when("/labelEquipment", {
+				templateUrl: "views/equipment/equipmentSearch.labelEquipment.view.html",
+				controller: "EquipmentSearchController",
+				controllerAs: "model",
+			})				
+			.when("/createdEquipment", {
+				templateUrl: "views/equipment/equipmentSearch.createdEquipment.view.html",
+				controller: "EquipmentSearchController",
+				controllerAs: "model",
+			})					
+			.when("/createdByEquipment", {
+				templateUrl: "views/equipment/equipmentSearch.createdByEquipment.view.html",
+				controller: "EquipmentSearchController",
+				controllerAs: "model",
+			})	
+			.when("/priceEquipment", {
+				templateUrl: "views/equipment/equipmentSearch.priceEquipment.view.html",
+				controller: "EquipmentSearchController",
+				controllerAs: "model",
+			})	
+			.when("/categoryEquipment", {
+				templateUrl: "views/equipment/equipmentSearch.categoryEquipment.view.html",
+				controller: "EquipmentSearchController",
+				controllerAs: "model",
+			})	
+			.when("/companyEquipment", {
+				templateUrl: "views/equipment/equipmentSearch.companyEquipment.view.html",
+				controller: "EquipmentSearchController",
+				controllerAs: "model",
+			})	
+			
       .otherwise({redirectTo: "/home"});    
   }
 }) ();

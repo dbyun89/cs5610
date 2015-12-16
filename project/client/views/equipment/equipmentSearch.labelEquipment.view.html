@@ -1,0 +1,28 @@
+<h2>Search Equipment</h2>
+<hr>
+
+<ul class="nav nav-tabs">
+	<li><a href="#equipmentSearch">Search Equipment</a></li>
+	<li class="active"><a data-toggle="tab" href="#labelEquipment">By Equipment Name</a></li>
+	<li><a data-toggle="tab" href="#createdEquipment">By Date Posted</a></li>
+	<li><a data-toggle="tab" href="#createdByEquipment">By Equipment Poster</a></li>
+	<li><a data-toggle="tab" href="#priceEquipment">By Price</a></li>
+	<li><a data-toggle="tab" href="#categoryEquipment">By Category</a></li>
+	<li><a data-toggle="tab" href="#companyEquipment">By Company</a></li>
+</ul>
+
+<div id="labelEquipment" class="tab-pane fade in active">
+	<table class="table">
+		Search by equipment name: <input ng-model="search.label" type="text">
+		<tr ng-repeat="page in model.pages | filter:search">
+			<td>
+				<a href="#/page/{{page._id}}/details">
+					Equipment Name: {{page.label}}<br>Dated Created: {{page.created}}<br>
+					Created By: {{page.createdBy}}<br>Equipment Price: {{page.price}}<br>
+					Equipment Category: {{page.category}}<br>Equipment Company {{page.company}}
+				</a>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+</div>

@@ -1,32 +1,120 @@
 <h2>Search Equipment</h2>
 <hr>
-<form>
-<table class="table">
-	<tr>
-		<td>
-			Equipment Id:<input ng-model="model.page._id" class="form-control" placeholder="Page Name" required/><br>
-		</td>
 
-    </tr>
-</table>
-<button ng-click="model.getPageById(_id)" class="btn btn-primary btn-block">List Equipment
-</button>
-</form>		
+<ul class="nav nav-tabs">
+	<li class="active"><a data-toggle="tab" href="#equipmentSearch">Search Equipment</a></li>
+	<li><a data-toggle="tab" href="#labelEquipment">By Equipment Name</a></li>
+	<li><a data-toggle="tab" href="#createdEquipment">By Date Posted</a></li>
+	<li><a data-toggle="tab" href="#createdByEquipment">By Equipment Poster</a></li>
+	<li><a data-toggle="tab" href="#priceEquipment">By Price</a></li>
+	<li><a data-toggle="tab" href="#categoryEquipment">By Category</a></li>
+	<li><a data-toggle="tab" href="#companyEquipment">By Company</a></li>
+</ul>
+
+<div class="tab-content">
+	<div id="equipmentSearch" class="tab-pane fade in active">
+		<table class="table">
+			Search: <input ng-model="search" type="text">
+			<tr ng-repeat="page in model.pages | filter:search">
+				<td>
+					<a href="#/page/{{page._id}}/details">
+					Equipment Name: {{page.label}}<br>Dated Created: {{page.created}}<br>
+					Created By: {{page.createdBy}}<br>Equipment Price: {{page.price}}<br>
+					Equipment Category: {{page.category}}<br>Equipment Company {{page.company}}
+					</a>
+				</td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+	</div>
+	<div id="labelEquipment" class="tab-pane fade">
+		<table class="table">
+			Search by equipment name: <input ng-model="search.label" type="text">
+			<tr ng-repeat="page in model.pages | filter:search">
+				<td>
+					<a href="#/page/{{page._id}}/details">
+					{{page.label}}
+					</a>
+				</td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+	</div>
+	<div id="createdEquipment" class="tab-pane fade">
+		<table class="table">
+			Search by date posted: <input ng-model="search.created" type="text">
+			<tr ng-repeat="page in model.pages | filter:search">
+				<td>
+					<a href="#/page/{{page._id}}/details">
+					{{page.created}}
+					</a>
+				</td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+	</div>	
+	<div id="createdByEquipment" class="tab-pane fade">
+		<table class="table">
+			Search by date posted: <input ng-model="search.created" type="text">
+			<tr ng-repeat="page in model.pages | filter:search">
+				<td>
+					<a href="#/page/{{page._id}}/details">
+					{{page.created}}
+					</a>
+				</td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>	
+	</div>
+	<div id="priceEquipment" class="tab-pane fade">
+		<table class="table">
+			Search by date posted: <input ng-model="search.created" type="text">
+			<tr ng-repeat="page in model.pages | filter:search">
+				<td>
+					<a href="#/page/{{page._id}}/details">
+					{{page.created}}
+					</a>
+				</td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>	
+	</div>	
+	<div id="categoryEquipment" class="tab-pane fade">
+		<table class="table">
+			Search by date posted: <input ng-model="search.created" type="text">
+			<tr ng-repeat="page in model.pages | filter:search">
+				<td>
+					<a href="#/page/{{page._id}}/details">
+					{{page.created}}
+					</a>
+				</td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>	
+	</div>	
+	<div id="companyEquipment" class="tab-pane fade">
+		<table class="table">
+			Search by date posted: <input ng-model="search.created" type="text">
+			<tr ng-repeat="page in model.pages | filter:search">
+				<td>
+					<a href="#/page/{{page._id}}/details">
+					{{page.created}}
+					</a>
+				</td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>	
+	</div>	
 	
-566f67278efc10181b823efa
-
-<h2>View Search Results</h2>
-{{model.equipmentResults}}
-
-<table class="table">
-
 	
-    <tr ng-repeat="page in model.equipmentResults">
-        <td>
-            <a href="#/page/{{page._id}}/details">
-                {{page.label}}
-            </a>
-        </td>
-        <td>&nbsp;</td>
-    </tr>
-</table>
+</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
