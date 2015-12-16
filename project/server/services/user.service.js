@@ -1,5 +1,4 @@
-module.exports = function(app, User, passport)
-{
+module.exports = function(app, User, passport) {
   app.get("/rest/user/:id", function(req, res)
   {
     isUserAdmin(req.user.username, function(user)

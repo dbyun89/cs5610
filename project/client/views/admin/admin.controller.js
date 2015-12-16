@@ -5,6 +5,7 @@
 
 	function AdminController(UserService) {
 		var vm = this;
+		
 		vm.addUser = addUser;
 		vm.removeUser = removeUser;
 		vm.selectUser = selectUser;
