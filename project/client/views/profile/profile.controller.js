@@ -1,5 +1,4 @@
-(function()
-{
+(function() {
   angular
     .module("WhiteBoardApp")
     .controller("ProfileController", ProfileController);
@@ -17,4 +16,4 @@
       });
     }
   }
-})()
+}) ()

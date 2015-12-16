@@ -51,7 +51,7 @@ module.exports = function(app, User, passport)
     }
     else
     {
-      user.roles = ["student"];
+      user.roles = ["user"];
     }
     User.findOne({username: user.username}, function(err, existingUser)
     {
