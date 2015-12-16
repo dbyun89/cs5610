@@ -10,8 +10,6 @@ module.exports = function() {
 		dateCreated: {type: Date, default: Date.now},
 		phone: String,
 		equipmentPosted: [String],
-		equipmentBought: [String],
-		usersLiked: [String],
 		roles:     [String]
 	}, {collection: "user"});
   
