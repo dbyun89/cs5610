@@ -1,4 +1,4 @@
-(function(){
-    angular
-        .module("WhiteBoardApp", ["ngRoute"]);
-})();
+(function() {
+	angular
+		.module("WhiteBoardApp", ["ngRoute"]);
+}) ();

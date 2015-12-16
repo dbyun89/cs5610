@@ -1,0 +1,11 @@
+<nav>
+	<ul class="nav nav-pills nav-stacked">
+		<li ng-class="{'active' : $location.url().indexOf('home') != -1}"><a href="#/home">Home</a></li>
+		<li ng-class="{'active' : $location.url().indexOf('courses') != -1}"><a href="#/equipmentView">Equipment Browse</a></li>
+			<!-- change this one to href="#/equipmentSearch" -->
+		<li ng-class="{'active' : $location.url().indexOf('courses') != -1}"><a href="#/equipmentSearch">Equipment Search</a></li>
+		<li ng-show="currentUser" ng-class="{'active' : $location.url().indexOf('profile') != -1}"><a href="#/profile">Profile</a></li>
+		<li ng-show="currentUser.roles.indexOf('admin') > -1" ng-class="{'active' : $location.url().indexOf('admin') != -1}"><a href="#/admin">Admin</a></li>
+		<li ng-show="currentUser" ng-class="{'active' : $location.url().indexOf('form') != -1}"><a href="#/equipment">Post Equipment</a></li>
+	</ul>
+</nav>

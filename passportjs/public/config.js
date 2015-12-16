@@ -36,23 +36,23 @@
 			})
 
 			
-			.when("/page", {
-				templateUrl: "page/page.list.view.html",
+			.when("/equipment", {
+				templateUrl: "equipment/equipment.list.view.html",
 				controller: "PageListController",
 				controllerAs: "model",
 				resolve    : {
 				loggedin : checkLoggedin
 			  }
 			})
-			.when("/page/:pageId/details",
+			.when("/equipment/:pageId/details",
 			{
-				templateUrl: "page/page.details.view.html",
+				templateUrl: "equipment/equipment.details.view.html",
 				controller: "PageDetailsController",
 				controllerAs: "model"
 			})
-/* 			.when("/page/:pageId/details/:index",
+/* 			.when("/equipment/:pageId/details/:index",
 			{
-				templateUrl: "page/page.content.details.view.html",
+				templateUrl: "equipment/equipment.content.details.view.html",
 				controller: "PageContentEditorController",
 				controllerAs: "model"
 			})	 */

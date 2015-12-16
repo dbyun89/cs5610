@@ -1,0 +1,10 @@
+/* Style Sheet */
+
+/* Modifying horizontal rule; making darker */
+
+hr {
+	height: 1px;
+	border: 0px;
+	background-color: blue;
+	color: blue;
+}

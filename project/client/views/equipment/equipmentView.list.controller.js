@@ -1,9 +1,9 @@
 (function() {
 	angular
 		.module("WhiteBoardApp")
-		.controller("PageListController", PageListController);
+		.controller("PageViewController", PageViewController);
 
-	function PageListController(PageService, UserService) {
+	function PageViewController(PageService, UserService) {
 		var model = this;
 		
 		

@@ -1,0 +1,32 @@
+<h2>Search Equipment</h2>
+<hr>
+<form>
+<table class="table">
+	<tr>
+		<td>
+			Equipment Id:<input ng-model="model.page._id" class="form-control" placeholder="Page Name" required/><br>
+		</td>
+
+    </tr>
+</table>
+<button ng-click="model.getPageById(_id)" class="btn btn-primary btn-block">List Equipment
+</button>
+</form>		
+	
+566f67278efc10181b823efa
+
+<h2>View Search Results</h2>
+{{model.equipmentResults}}
+
+<table class="table">
+
+	
+    <tr ng-repeat="page in model.equipmentResults">
+        <td>
+            <a href="#/page/{{page._id}}/details">
+                {{page.label}}
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+</table>

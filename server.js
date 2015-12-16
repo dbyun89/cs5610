@@ -58,7 +58,7 @@ if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD) {
 
 var db = mongoose.connect(connectionString);
 
-app.use(express.static(__dirname + '/passportjs/public'));
+app.use(express.static(__dirname + '/project/client'));
 //app.use(express.static(__dirname));
 
 var ipaddress = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
@@ -68,10 +68,10 @@ var port      = process.env.OPENSHIFT_NODEJS_PORT || 3000;
 //require("./index/server/app.js")(app, mongoose, db);
 //require("./project/server/app.js")(app, mongoose, db);
 
-require("./passportjs/public/server/app.js")(app, mongoose, db);
+require("./project/client/server/app.js")(app, mongoose, db);
 
-var UserModel = require("./passportjs/user/user.model.js")();
-var UserService = require("./passportjs/user/user.service.js")(app, UserModel, passport);
+var UserModel = require("./project/server/models/user.model.js")();
+var UserService = require("./project/server/services/user.service.js")(app, UserModel, passport);
 
 app.listen(port, ipaddress);
 

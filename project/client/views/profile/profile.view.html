@@ -1,0 +1,51 @@
+<h1>Profile</h1>
+<hr>
+<h2>{{currentUser.username}}'s Profile Page</h2>
+
+<table class="table table-bordered">
+	<tr>
+		<th>Username:</th>
+		<span ng-show="currentUser">
+		<th>Password:</th>
+		</span>
+		<th>First Name:</th>
+		<th>Last Name:</th>
+		<th>Email:</th>
+		<th>Roles:</th>
+	</tr>
+    <tr>
+		<td>{{currentUser.username}}</td>
+		<span ng-show="currentUser">
+		<td>{{currentUser.password}}</td>
+		</span>
+		<td>{{currentUser.firstName}}</td>
+		<td>{{currentUser.lastName}}</td>
+		<td>{{currentUser.email}} </td>
+		<td>{{currentUser.roles}}</td>
+	</tr>
+</table>
+Equipment Posted by {{currentUser.username}}:
+{{currentUser.equipmentPosted}}
+<br><br>
+Equipment Bought by {{currentUser.username}}:
+{{currentUser.equipmentBought}}
+<br><br>
+Users Liked by {{currentUser.username}}:
+{{currentUser.usersLiked}}
+<br><br>
+
+<hr>
+<h2>Update Profile:</h2>
+
+<form>
+Username:<input  ng-model="currentUser.username"  class="form-control" placeholder="username"/><br>
+Password:<input  ng-model="currentUser.password"  class="form-control" placeholder="password"  type="password"/><br>
+Email:<input  ng-model="currentUser.email"     class="form-control" placeholder="email"     type="email"/><br>
+First Name:<input  ng-model="currentUser.firstName" class="form-control" placeholder="first name"/><br>
+Last Name:<input  ng-model="currentUser.lastName"  class="form-control" placeholder="last name"/><br>
+<button ng-click="controller.update(currentUser)" class="btn btn-primary btn-block">
+	Update Profie
+</button>
+</form>
+<br>
+{{currentUser}}

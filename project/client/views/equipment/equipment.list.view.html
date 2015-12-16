@@ -1,0 +1,43 @@
+<h2>Post Equipment</h2>
+<hr>
+model.page.createdBy = {{currentUser.username}};
+
+<form>
+<table class="table">
+	<tr>
+		<td>
+			Equipment Name:<input ng-model="model.page.label" class="form-control" placeholder="Page Name" required/><br>
+			Equipment Price:<input ng-model="model.page.price" class="form-control" placeholder="Page Price" required/><br>
+			Equipment Company:<input ng-model="model.page.company" class="form-control" placeholder="Page Company"/><br>
+			Username:<input ng-model="model.page.createdBy" class="form-control" ng-init="model.page.createdBy='Username'"/><br>
+		</td>
+
+    </tr>
+	<tr>
+		<td>
+			Pick one of the five equipment categories:<input type="radio" value="Rakes" ng-model="model.page.category" class="form-control" placeholder="Page Category">Rakes
+			<input type="radio" value="Pruning Tools" ng-model="model.page.category" class="form-control" placeholder="Page Category"/>Pruning Tools
+			<input type="radio" value="Digging Tools" ng-model="model.page.category" class="form-control" placeholder="Page Category"/>Digging Tools
+			<input type="radio" value="Striking Tools" ng-model="model.page.category" class="form-control" placeholder="Page Category"/>Striking Tools
+			<input type="radio" value="Transport Tools" ng-model="model.page.category" class="form-control" placeholder="Page Category"/>Transport Tools
+		</td>
+	</tr>
+
+<!-- <input type="hidden" value="SSSSSS" ng-model="model.page.createdBy" class="form-control">	 -->
+	
+</table>
+<button ng-click="model.addPage(model.page)" class="btn btn-primary btn-block">List Equipment
+</button>
+</form>		
+		
+<table class="table">
+	<h2>View Available Equipment</h2>
+    <tr ng-repeat="page in model.pages">
+        <td>
+            <a href="#/page/{{page._id}}/details">
+                {{page.label}}
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+</table>

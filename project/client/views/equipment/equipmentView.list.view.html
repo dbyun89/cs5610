@@ -1,0 +1,13 @@
+<h2>Browse All Equipment</h2>
+
+<table class="table">
+
+    <tr ng-repeat="page in model.pages">
+        <td>
+            <a href="#/page/{{page._id}}/details">
+                {{page.label}}
+            </a>
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+</table>

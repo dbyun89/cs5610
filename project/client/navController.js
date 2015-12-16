@@ -4,14 +4,12 @@
 		.controller("NavController", NavController);
 
 	function NavController(UserService, $rootScope, $location) {
-		
 		var vm = this;
 		vm.logout = logout;
     
 		function logout() {
 			UserService.logout(function() {
 				$rootScope.currentUser = null;
-				Session.clear();
 				$location.url("/home");
 			});
 		}

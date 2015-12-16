@@ -1,0 +1,14 @@
+<div class="container" ng-controller="NavController as controller">
+<header>
+	<a class="navbar-brand" href="#/home">Garden Equipment Market</a>	
+	<!-- <h4 class="pull-left">WhiteBoard App</h4> -->
+	<nav class="pull-right">
+		<ul class="list-inline nav nav-pills">
+			<li ng-hide="currentUser" ng-class="{'active' : $location.url().indexOf('register') != -1}"><a href="#/register">Register</a></li>
+			<li ng-hide="currentUser" ng-class="{'active' : $location.url().indexOf('login') != -1}"><a href="#/login">Login</a></li>
+			<li ng-show="currentUser" ng-class="{'active' : $location.url().indexOf('logout') != -1}"><a href="#" ng-click="controller.logout()">Logout</a></li>
+		</ul>
+	</nav>
+</header>
+</div>
+
