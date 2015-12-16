@@ -56,12 +56,6 @@
 				controller: "PageDetailsController",
 				controllerAs: "model"
 			})
-/* 			.when("/page/:pageId/details/:index",
-			{
-				templateUrl: "equipment/equipment.content.details.view.html",
-				controller: "PageContentEditorController",
-				controllerAs: "model"
-			})	 */
 			.when("/labelEquipment", {
 				templateUrl: "views/equipment/equipmentSearch.labelEquipment.view.html",
 				controller: "EquipmentSearchController",
@@ -92,9 +86,8 @@
 				controller: "EquipmentSearchController",
 				controllerAs: "model",
 			})	
-			
-      .otherwise({redirectTo: "/home"});    
-  }
+			.otherwise({redirectTo: "/home"});    
+	}
 }) ();
 
 var checkLoggedin = function($q, $timeout, $http, $location, $rootScope) {
